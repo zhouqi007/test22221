@@ -1,0 +1,55 @@
+{% extends "base/base.html" %}
+{% load static  %}
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'axf/main/css/main.css' %}">
+{% endblock %}
+
+{% block header %}
+    <header></header>
+{% endblock %}
+
+{% block footer %}
+    <footer>
+        <a href="{% url 'myaxf:home' %}" class="home">
+            <dl>
+                <dt>
+                    <span></span>
+                </dt>
+                <dd>
+                    首页
+                </dd>
+            </dl>
+        </a>
+        <a href="{% url 'myaxf:market' %}" class="market">
+            <dl>
+                <dt>
+                    <span></span>
+                </dt>
+                <dd>
+                    闪购
+                </dd>
+            </dl>
+        </a>
+        <a href="{% url 'myaxf:cart' %}" class="cart">
+            <dl>
+                <dt>
+                    <span></span>
+                </dt>
+                <dd>
+                    购物车
+                </dd>
+            </dl>
+        </a>
+        <a href="{% url 'myaxf:mine' %}" class="mine">
+            <dl>
+                <dt>
+                    <span></span>
+                </dt>
+                <dd>
+                    我的
+                </dd>
+            </dl>
+        </a>
+    </footer>
+{% endblock %}
